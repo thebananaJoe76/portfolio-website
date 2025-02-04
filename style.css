@@ -18,6 +18,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -30,101 +31,102 @@ nav ul li a {
 }
 
 #hero {
-    color: #000000;
-    padding: 4rem 1rem;
     text-align: center;
+    padding: 4rem 1rem;
+}
+
+#hero h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+#hero p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+#about, #projects, #contact {
+    padding: 2rem 5%;
+}
+
+.shiftRightH, .shiftRightP {
+    margin-left: 5%;
+}
+
+.shiftRightP {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.current-page {
+    color: rgb(110, 110, 221);
 }
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 70px;
+    justify-items: center;
 }
 
 .project-item {
+    width: 100%;
+    max-width: 640px;
     border: 5px solid #ccc;
     padding: 10px;
     background: #f9f9f9;
 }
 
-@media (max-width: 700px) {
-    nav ul {
-        flex-direction: column;
-    }
-}
-
-.shiftRightH {
-    margin-left: 20px;
-}
-
-.shiftRightP {
-    margin-left: 40px;
-}
-
-.shiftRightV {
-    margin-left: 15%;
+.project-item video {
+    width: 100%;
+    height: auto;
 }
 
 .ending {
-    margin-top: 100px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+#games {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    padding: 2rem 5%;
+}
+
+.descC {
+    margin-left: 20px;
+}
+
+.game {
     text-align: center;
 }
 
-.current-page {
-    color: #2596be;
+.game-link {
+    display: block;
+    margin-bottom: 10px;
+    color: rgb(101, 115, 170);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.game-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 5px;
 }
 
 @media (max-width: 768px) {
-    #hero h1 {
-        font-size: 2rem;
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
-
-    #hero p {
-        font-size: 1rem;
-    }
-
+    
     .project-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
     }
-
-    .project-item {
-        width: 100%;
-        margin-left: 0 !important;
+    
+    .game-img {
+        max-width: 100%;
     }
-
-    video {
-        width: 100%;
-        height: auto;
-    }
-
-    .shiftRightH,
-    .shiftRightP {
-        margin-left: 15px;
-    }
-
-    .ending {
-        margin-top: 50px;
-        font-size: 1.2rem;
-        padding: 0 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    nav ul li {
-        margin: 0 0.5rem;
-    }
-
-    #hero {
-        padding: 2rem 1rem;
-    }
-
-    .project-item {
-        padding: 5px;
-    }
-}
-
-img, video {
-    max-width: 100%;
-    height: auto;
 }
