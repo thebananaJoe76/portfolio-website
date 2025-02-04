@@ -73,3 +73,58 @@ nav ul li a {
 .current-page {
     color: #2596be;
 }
+
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-item {
+        width: 100%;
+        margin-left: 0 !important;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+    }
+
+    .shiftRightH,
+    .shiftRightP {
+        margin-left: 15px;
+    }
+
+    .ending {
+        margin-top: 50px;
+        font-size: 1.2rem;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        margin: 0 0.5rem;
+    }
+
+    #hero {
+        padding: 2rem 1rem;
+    }
+
+    .project-item {
+        padding: 5px;
+    }
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
