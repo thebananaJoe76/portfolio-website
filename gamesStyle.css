@@ -60,7 +60,56 @@ nav ul li a {
 }
 
 .game-img {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: auto;
     border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .descC {
+        font-size: 1.5rem;
+        margin-left: 15px;
+        margin-top: 15px;
+        padding: 0 10px;
+    }
+
+    #games {
+        flex-direction: column;
+        gap: 50px;
+        margin-top: 50px;
+        padding: 0 15px;
+    }
+
+    .game-link {
+        font-size: 2rem;
+    }
+
+    .game-img {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .descC {
+        font-size: 1.2rem;
+    }
+
+    .game-link {
+        font-size: 1.5rem;
+    }
+
+    .game {
+        margin-bottom: 30px;
+    }
+
+    nav ul li {
+        margin: 0 0.3rem;
+    }
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
 }
